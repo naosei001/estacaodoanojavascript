@@ -1,0 +1,37 @@
+// Função para determinar a estação do ano
+function determinarEstacao(mes) {
+    // Converter o mês para minúsculas e remover espaços extras
+    mes = mes.trim().toLowerCase();
+    
+    switch (mes) {
+        case 'janeiro':
+        case 'fevereiro':
+        case 'março':
+        case 'abril':
+        case 'maio':
+        case 'junho':
+            return 'Primavera';
+        case 'julho':
+        case 'agosto':
+        case 'setembro':
+        case 'outubro':
+        case 'novembro':
+        case 'dezembro':
+            return 'Verão';
+        case 'setembro':
+        case 'outubro':
+        case 'novembro':
+            return 'Outono';
+        case 'dezembro':
+        case 'janeiro':
+        case 'fevereiro':
+            return 'Inverno';
+        default:
+            return 'Mês inválido';
+    }
+}
+
+// Exemplo de uso da função
+const mes = prompt('Digite o mês:');
+const estacao = determinarEstacao(mes);
+alert(`A estação do ano para o mês de ${mes} é: ${estacao}`);
